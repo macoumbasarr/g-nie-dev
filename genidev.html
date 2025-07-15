@@ -1,0 +1,351 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>GENIDEV - Groupe d'Étudiants Développeurs</title>
+  <link rel="stylesheet" href="styles.css">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+  <style>
+    :root {
+  --primary-color: #3498db;
+  --secondary-color: #2ecc71;
+  --text-color: #333;
+  --background-color: #f4f4f4;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Poppins', sans-serif;
+  line-height: 1.6;
+  color: var(--text-color);
+  background-color: var(--background-color);
+}
+
+header {
+  background-color: white;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+  position: fixed;
+  width: 100%;
+  z-index: 1000;
+}
+
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 5%;
+}
+
+.logo {
+  height: 50px;
+}
+
+nav ul {
+  display: flex;
+  list-style: none;
+}
+
+nav ul li {
+  margin-left: 20px;
+}
+
+nav ul li a {
+  text-decoration: none;
+  color: var(--primary-color);
+  font-weight: 600;
+  transition: color 0.3s ease;
+}
+
+.hero {
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+  color: white;
+  text-align: center;
+}
+
+.hero-content h1 {
+  font-size: 3rem;
+  margin-bottom: 1rem;
+}
+
+.cta-button {
+  display: inline-block;
+  background-color: white;
+  color: var(--primary-color);
+  padding: 10px 20px;
+  border-radius: 5px;
+  text-decoration: none;
+  margin-top: 20px;
+}
+
+section {
+  padding: 4rem 5%;
+  text-align: center;
+}
+
+.skills-grid, .team-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
+  margin-top: 30px;
+}
+
+.skill-card, .team-member {
+  background-color: white;
+  border-radius: 10px;
+  padding: 20px;
+  box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+  transition: transform 0.3s ease;
+}
+
+.skill-card:hover, .team-member:hover {
+  transform: translateY(-10px);
+}
+
+.contact-info {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 30px;
+}
+
+.social-links {
+  display: flex;
+  gap: 20px;
+}
+
+.social-icon {
+  text-decoration: none;
+  color: var(--primary-color);
+  font-weight: 600;
+}
+
+footer {
+  background-color: var(--primary-color);
+  color: white;
+  text-align: center;
+  padding: 1rem;
+}
+
+@media (max-width: 768px) {
+  .skills-grid, .team-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 480px) {
+  .skills-grid, .team-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+
+
+.team-member img {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin-bottom: 15px;
+}
+
+.member-socials a {
+  color: var(--primary-color);
+  margin: 0 10px;
+  font-size: 1.5rem;
+}
+
+/* Contact Section */
+.contact {
+  background-color: var(--primary-color);
+  color: white;
+  padding: 2rem 5%;
+  text-align: center;
+}
+
+.social-links {
+  margin-top: 20px;
+}
+
+.social-icon {
+  color: white;
+  font-size: 2rem;
+  margin: 0 15px;
+  transition: color 0.3s ease;
+}
+
+.social-icon:hover {
+  color: var(--secondary-color);
+}
+
+/* Footer */
+footer {
+  background-color: #333;
+  color: white;
+  text-align: center;
+  padding: 1rem;
+}
+
+/* Responsive Design */
+@media screen and (max-width: 768px) {
+  .skills-grid, .team-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  nav ul {
+    display: none; /* Consider adding a mobile menu */
+  }
+}
+.logo{
+  font-size: 32px;
+}
+#geni{
+  font-size: 32px;
+  color: #2ecc71;
+}
+#equipe{
+  color: #2ecc71;
+  font-size: 30px;
+}
+#qui{
+  color: #2ecc71;
+  font-size: 30px;
+}
+#com{
+  color: #2ecc71;
+  font-size: 30px;
+}
+#groupe{
+  border: 1px solid #2ecc71;
+  padding-bottom: 30px 30px;
+  
+}
+
+  </style>
+</head>
+<body>
+  <header>
+    <nav>
+      <div class="logo-container">
+        <h1 id="geni">GENI<span>DEV</span></h1>
+      </div>
+      <ul>
+        <li><a href="#home">Accueil</a></li>
+        <li><a href="#about">À Propos</a></li>
+        <li><a href="#skills">Compétences</a></li>
+        <li><a href="#team">Équipe</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <section id="home" class="hero">
+      <div class="hero-content">
+        <h1>GENIDEV</h1>
+        <p>Groupe d'Étudiants Développeurs Innovants</p>
+        <a href="#about" class="cta-button">Découvrir Plus</a>
+      </div>
+    </section>
+
+    <section id="about" class="about">
+      <h2 id="qui">Qui Sommes-Nous ?</h2>
+      <div class="about-content">
+        <p id="groupe">GENIDEV est un groupe dynamique d'étudiants passionnés par le développement web et les technologies numériques. Notre mission est de créer des solutions innovantes et d'apprendre ensemble.</p>
+      </div>
+    </section>
+
+    <section id="skills" class="skills">
+      <h2 id="com">Nos Compétences</h2>
+      <div class="skills-grid">
+        <div class="skill-card">
+          <img src="../image/html.jpg" alt="HTML Logo">
+          <h3>HTML</h3>
+          <p>Structuration de contenu web</p>
+        </div>
+        <div class="skill-card">
+          <img src="../image/css.jpg" alt="CSS Logo">
+          <h3>CSS</h3>
+          <p>Design et mise en page</p>
+        </div>
+        <div class="skill-card">
+          <img src="../image/java.jpg" alt="JavaScript Logo">
+          <h3>JavaScript</h3>
+          <p>Interactions dynamiques</p>
+        </div>
+        <div class="skill-card">
+          <img src="../image/boost.jpg" alt="Bootstrap Logo">
+          <h3>Bootstrap</h3>
+          <p>Framework responsive</p>
+        </div>
+      </div>
+    </section>
+
+    <section id="team" class="team">
+      <h2 id="equipe">Notre Équipe</h2>
+      <div class="team-grid">
+        <div class="team-member">
+          <img src="../image/macoumba.jpg" alt="Membre 1">
+          <h3>Macoumba Sarr</h3>
+          <p>Développeur Front-end</p>
+        </div>
+        <div class="team-member">
+          <img src="../image/mbaye.jpg" alt="Membre 2">
+          <h3>Babacar Mbaye</h3>
+          <p>Développeur Back-end</p>
+        </div>
+        <div class="team-member">
+          <img src="../image/babs.jpg" alt="Membre 3">
+          <h3>Babacar Diagne</h3>
+          <p>Designer UX/UI</p>
+        </div>
+        <div class="team-member">
+          <img src="../image/dahi.jpg.jpg" alt="Membre 3">
+          <h3>Dahi Aidara</h3>
+          <p>Designer UX/UI</p>
+        </div>
+      </div>
+    </section>
+
+    <section id="contact" class="contact">
+      <h2>Contactez-Nous</h2>
+      <div class="contact-info">
+        <div class="social-links">
+          <a href="#" class="social-icon">Facebook</a>
+          <a href="#" class="social-icon">Twitter</a>
+          <a href="#" class="social-icon">LinkedIn</a>
+        </div>
+        <div class="phone-number">
+          <p>📞 +221 77 123 45 67</p>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <p>© 2023 GENIDEV. Tous droits réservés.</p>
+  </footer>
+</body>
+</html>
+
+            <a href="#" class="social-icon"><i class="fab fa-instagram"></i></a>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- <footer>
+    <p>&copy; 2023 GENIDEV. Tous droits réservés.</p>
+  </footer> -->
+</body>
+</html>
